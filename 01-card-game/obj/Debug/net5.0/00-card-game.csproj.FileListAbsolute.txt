@@ -1,0 +1,16 @@
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.exe
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.deps.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.runtimeconfig.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.runtimeconfig.dev.json
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\ref\00-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\bin\Debug\net5.0\00-card-game.pdb
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.csprojAssemblyReference.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.AssemblyInfoInputs.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.AssemblyInfo.cs
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.csproj.CoreCompileInputs.cache
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\ref\00-card-game.dll
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.pdb
+C:\Users\Sunil Khandwala\Documents\_Markdown Pages\csc-card-game\00-card-game\obj\Debug\net5.0\00-card-game.genruntimeconfig.cache

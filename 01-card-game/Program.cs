@@ -82,6 +82,7 @@
 ///
 //
 
+//
 //turn based system
 //use card for the object constructor for both the player and the target
 //steps to take for a single turn
@@ -134,18 +135,114 @@ namespace _01_card_game
     class Program
     {
 
+        //global variables
+        public static bool isTurn;
+        public static bool isGame;
 
-        
+        public static int turnCounter;
+
+        public static bool changeTurn (bool turnStart, int turnNum, int playerNumber){
+
+
+            if (playerNumber == 1 && turnStart == true && turnNum == 0) {
+                Console.WriteLine();
+                Console.WriteLine("Player One turn");
+                Console.WriteLine("is turn = true");
+                Console.ReadKey();
+                return false;
+            }
+
+            else if (playerNumber == 2 && turnStart == false && turnNum == 0)  {
+                Console.WriteLine();
+                Console.WriteLine("Player two turn");
+                Console.WriteLine("isTurn = false");
+                Console.ReadKey();
+                return true;
+            }
+            
+            else if (playerNumber == 1 && turnStart == true && turnNum > 0) {
+                Console.WriteLine();
+                Console.WriteLine("Player one SHOULD BE HERE");
+                Console.WriteLine("Second turn");
+                Console.ReadKey();
+                return false;
+            }
+            
+            else if (playerNumber == 2 && turnStart == false && turnNum > 0){
+                Console.WriteLine();
+                Console.WriteLine("To start press any key. SHOULD BE HERE FOR PLAYER 2");
+                Console.WriteLine("Or this is player two turn #");
+                Console.ReadKey();
+                return true;
+            }
+            else {
+                return turnStart;
+            }
+
+
+        }
+
+        public static void gameStart (bool isGame) {
+
+            do {
+                if(isTurn == false){
+                    //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
+                    turnCounter++;
+                    Console.WriteLine("printed player 2");
+                    isTurn = true;
+                    Console.ReadKey();
+                    
+                }
+                if(isTurn == true){
+                    //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
+                    turnCounter++;
+                    Console.WriteLine("printed player 1");
+                    isTurn = false;
+                    Console.ReadKey();
+                    
+                }
+                else {
+                    Console.WriteLine();
+                    Console.WriteLine("no turns here");
+                }
+
+            }while (isGame == true);
+
+        }
 
 
         // What do I need?
         static void Main(string[] args)
         {
+            // turnStart = false;
+            // gameStart = false;
+
+
             Console.SetWindowSize(150, 40);
-            Console.SetCursorPosition(62,5);
+            Console.SetCursorPosition(62,2);
             Console.WriteLine("Hello World 2222!");
             Console.WriteLine();
             Console.ReadKey();
+            turnCounter = 0;
+            isGame = true;
+            isTurn = true;
+            gameStart(isGame);
+
+
+
+            // while(gameStart == false){
+            //     turnStarting(turnStart);
+            //     turnStart = true;
+            //     turnStarting(turnStart);
+            //     turnStart = false;
+            // }
+
+
+
+
+            //player turn
+                // track turn numbers(each or rounds??)
+            //
 
         }
 

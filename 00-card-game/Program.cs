@@ -16,6 +16,8 @@ namespace FireDeckTest
         {
 
 
+            // initilize everything here
+
             Console.SetWindowSize(150, 50);
             CreateMainStory();
 

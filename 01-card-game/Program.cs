@@ -1,5 +1,71 @@
-﻿using System;
+﻿
+// if(isTurn == false){
+                //     //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
 
+                //     if (isTurn == true && turnCounter == 0){
+                //         Console.WriteLine();
+                //         Console.WriteLine("printed player 2");
+                //         Console.WriteLine("first turn single mana count");
+                //     }
+                    
+                // }
+
+                // if(isTurn == true && turnCounter == 0){
+                //     //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
+                //     turnCounter++;
+                //     Console.WriteLine();
+                //     Console.WriteLine("printed player 1");
+                //     Console.WriteLine("turn number:" + turnCounter);
+                //     isTurn = false;
+                //     Console.ReadKey();
+                    
+                // }
+                // else {
+                //     Console.WriteLine();
+                //     Console.WriteLine("no turns here");
+                // }
+
+
+        // public static bool changeTurn (bool turnStart, int turnNum){
+
+
+        //     if (turnStart == true && turnNum == 0) {
+        //         Console.WriteLine();
+        //         Console.WriteLine("Player One turn");
+        //         Console.WriteLine("is turn = true");
+        //         Console.ReadKey();
+        //         return false;
+        //     }
+
+        //     else if (turnStart == false && turnNum == 0)  {
+        //         Console.WriteLine();
+        //         Console.WriteLine("Player two turn");
+        //         Console.WriteLine("isTurn = false");
+        //         Console.ReadKey();
+        //         return true;
+        //     }
+            
+        //     else if (turnStart == true && turnNum > 0) {
+        //         Console.WriteLine();
+        //         Console.WriteLine("Player one SHOULD BE HERE");
+        //         Console.WriteLine("Second turn");
+        //         Console.ReadKey();
+        //         return false;
+        //     }
+            
+        //     else if (turnStart == false && turnNum > 0){
+        //         Console.WriteLine();
+        //         Console.WriteLine("To start press any key. SHOULD BE HERE FOR PLAYER 2");
+        //         Console.WriteLine("Or this is player two turn #");
+        //         Console.ReadKey();
+        //         return true;
+        //     }
+        //     else {
+        //         return turnStart;
+        //     }
+
+
+        // }
 
 
 
@@ -126,99 +192,82 @@
 //loop until health
 //add each card properties as methods that check what object is in the fieldarea and plays
 //
+//
+
+using System;
 
 
 
-
-namespace _01_card_game
+namespace CardGame01
 {
     class Program
     {
-
         //global variables
         public static bool isTurn;
         public static bool isGame;
-
         public static int turnCounter;
+        public static void changeTurn () {
 
-        public static bool changeTurn (bool turnStart, int turnNum, int playerNumber){
-
-
-            if (playerNumber == 1 && turnStart == true && turnNum == 0) {
-                Console.WriteLine();
-                Console.WriteLine("Player One turn");
-                Console.WriteLine("is turn = true");
-                Console.ReadKey();
-                return false;
-            }
-
-            else if (playerNumber == 2 && turnStart == false && turnNum == 0)  {
-                Console.WriteLine();
-                Console.WriteLine("Player two turn");
-                Console.WriteLine("isTurn = false");
-                Console.ReadKey();
-                return true;
-            }
-            
-            else if (playerNumber == 1 && turnStart == true && turnNum > 0) {
-                Console.WriteLine();
-                Console.WriteLine("Player one SHOULD BE HERE");
-                Console.WriteLine("Second turn");
-                Console.ReadKey();
-                return false;
-            }
-            
-            else if (playerNumber == 2 && turnStart == false && turnNum > 0){
-                Console.WriteLine();
-                Console.WriteLine("To start press any key. SHOULD BE HERE FOR PLAYER 2");
-                Console.WriteLine("Or this is player two turn #");
-                Console.ReadKey();
-                return true;
-            }
-            else {
-                return turnStart;
-            }
-
-
-        }
-
-        public static void gameStart (bool isGame) {
-
-            do {
-                if(isTurn == false){
-                    //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
-                    turnCounter++;
-                    Console.WriteLine("printed player 2");
-                    isTurn = true;
-                    Console.ReadKey();
+            if (isTurn == true && turnCounter == 0) {
                     
+                Console.WriteLine();
+                Console.WriteLine("this is player one");
+                Console.ReadKey();
+                isTurn = false;
                 }
-                if(isTurn == true){
-                    //isTurn = changeTurn(isTurn, turnCounter, playerNumber);
-                    turnCounter++;
-                    Console.WriteLine("printed player 1");
-                    isTurn = false;
-                    Console.ReadKey();
-                    
+
+            else if (isTurn == true && turnCounter > 0) {
+                Console.WriteLine();
+                Console.WriteLine("player one now has mana");
+                Console.WriteLine(" p1 turn number: " + turnCounter);
+                Console.ReadKey();
+                isTurn = false;
+                turnCounter++;
+
                 }
+
+            else if (isTurn == false && turnCounter > 0) {
+                Console.WriteLine();
+                Console.WriteLine("player two now has mana");
+                Console.WriteLine(" p2 turn number: " + turnCounter);
+                Console.ReadKey();
+                isTurn = true;
+                turnCounter++;
+                }
+                
+            else if (isTurn == false && turnCounter == 0) {
+                Console.WriteLine();
+                Console.WriteLine("this player two");
+                Console.ReadKey();
+                isTurn = true;
+                turnCounter++;
+                }
+
+
                 else {
-                    Console.WriteLine();
-                    Console.WriteLine("no turns here");
+                Console.WriteLine();
+                Console.WriteLine("this is random else");
+                Console.ReadKey();
+
                 }
 
-            }while (isGame == true);
-
         }
-
-
+        public static void gameStart (bool isGame, bool isTurn, int turnCounter) {
+            do {
+                changeTurn();
+            } while (isGame == true);
+        }
         // What do I need?
         static void Main(string[] args)
         {
             // turnStart = false;
             // gameStart = false;
-
-
             Console.SetWindowSize(150, 40);
+
+            for (int i = 0; i < 150; i++) {
+                Console.SetCursorPosition(i,0);
+                Console.WriteLine("*");
+            }
             Console.SetCursorPosition(62,2);
             Console.WriteLine("Hello World 2222!");
             Console.WriteLine();
@@ -226,29 +275,7 @@ namespace _01_card_game
             turnCounter = 0;
             isGame = true;
             isTurn = true;
-            gameStart(isGame);
-
-
-
-            // while(gameStart == false){
-            //     turnStarting(turnStart);
-            //     turnStart = true;
-            //     turnStarting(turnStart);
-            //     turnStart = false;
-            // }
-
-
-
-
-            //player turn
-                // track turn numbers(each or rounds??)
-            //
-
+            gameStart(isGame, isTurn, turnCounter);
         }
-
-
     }
-
-
-
 }
